@@ -1,0 +1,36 @@
+body{
+  background-color: #58b1e7;
+}
+
+/***** Horloge ******/
+
+#clock{
+  color: #fff;
+  font-size: 195px;
+  background-color: #000;
+  padding: 0.5em 0em;
+  width: 80%;
+  margin: 0px auto;
+  font-family: Helvetica;
+  text-align: center;
+}
+#banner{
+  color: #fefefe;
+  font-size: 50px;
+  text-align: center;
+  background-color: #eb6c52;
+  padding: 0.5em 0em;
+    margin: 0px auto;
+  width: 80%;
+  font-family: Helvetica;
+  text-align: left;
+  text-transform: uppercase;
+}
+span{
+  margin-left: 175px
+}
+
+
+
+
+/****** Fin ******/
