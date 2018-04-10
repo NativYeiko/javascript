@@ -144,10 +144,10 @@ ul li.checked::before {
 
 /* Style header */
 .header {
-    background-color: #f44336;
+    background-color: #0e7e3b;
     padding: 30px 40px;
-    color: white;
-    text-align: center;
+    color: yellow;
+    text-align: left;
 }
 
 /* Clear floats after the header */
@@ -172,7 +172,7 @@ input {
     width: 25%;
     background: #d9d9d9;
     color: #555;
-    float: left;
+    float: right;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
@@ -182,6 +182,44 @@ input {
 .addBtn:hover {
     background-color: #bbb;
 }
+
+/******** Convertisseur monais************\
+*******************************************
+\*****************************************/
+
+#box
+ {
+     width:300px;
+     height:150px;
+     margin:0px auto;
+     border:2px solid black;
+ }
+h2
+{
+     text-align: center;
+ }
+table
+{
+     margin:0px auto;
+}
+
+
+/**********************************************
+***********Fin*********************************/
+
+/************Compteurde mots******************
+*********************************************/
+
+#output{
+  background: lightgreen;
+}
+#btn{
+  background-color: yellow;
+  color: blue;
+}
+
+/***********************************************
+*****************FIN***************************/
 
 /******** FORMULAIRE DE CONCTACT **************\
 I**********************************************I
@@ -238,7 +276,7 @@ input, textarea {
   font: 1em sans-serif;
 
   /* Pour donner la même dimension à tous les champs textuels */
-  width: 300px;
+  width: 100%;
 
   -moz-box-sizing: border-box;
        box-sizing: border-box;
@@ -279,6 +317,7 @@ button {
   background: #acb6e5; /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #acb6e5, #86fde8); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #acb6e5, #86fde8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 300px
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: red;

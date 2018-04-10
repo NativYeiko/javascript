@@ -28,7 +28,7 @@
     <section class="col-md-12">
       <h1>Todo List</h1>
       <div id="myDIV" class="header">
-        <h1>Ma premiére Todo List</h1>
+        <h1>JS project</h1>
         <input type="text" id="myInput" placeholder="Title...">
         <span onclick="newElement()" class="addBtn">Ajouter la tache</span>
       </div>
@@ -42,10 +42,13 @@
       </ul>
     </section>
     <section class="col-md-12">
-      <h1>Calculatrice</h1>
+      <h1>Calculatrice, Compteur, Convertiseur</h1>
 			<br>
 			<noscript>Désolé, la calculatrice a besoin de JavaScript pour fonctionner!</noscript>
-			<form>
+      <div class="col-md-4">
+        <h1>Calculatrice</h1>
+        <!-- Calculatrice -->
+        <form class="col-md-12">
 					<table>
 						<tbody>
 							<tr>
@@ -120,15 +123,63 @@
 						</tbody>
 					</table>
 					<br>
-			</form>
+			  </form>
+      </div>
+      <!-- Word count tour -->
+      <div class="col-md-3">
+        <h1>Compteur de Mots</h1>
+        <input type="text" id="str" name="" value="">
+        <div class="" id="output">
+          <button id="btn" type="button" name="button">Calcul tes mots</button>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="box">
+         <h2>Taux de change</h2>
+         <table>
+             <tr>
+                 <td><input id="fromAmount" type="text" size="15" onkeyup="recupererValeur()"/></td>
+                 <td>
+                     <select id="from" onchange="recupererValeur()">
+                       <option value="EUR">Europe (EUR)</option>
+                       <option value="GBP">Livres (GBP)</option>
+                       <option value="RUB">Rouble Russe (RUB)</option>
+                       <option value="CNY">Yuan (CNY)</option>
+                       <option value="CAD">Dollars Canadiens (CAD)</option>
+                       <option value="USD">Dollars US (USD)</option>
+                       <option value="JPY">Japanese Yen (JPY)</option>
+                       <option value="BTC">BiteCoin (BTC)</option>
+                       <option value="BTE">ByteCoin (BTE)</option>
+                     </select>
+                 </td>
+             </tr>
+             <tr>
+                <td><input id="toAmount" type="text" size="15" disabled/></td>
+                 <td>
+                     <select id="to" onchange="recupererValeur()">
+                       <option value="EUR">Europe (EUR)</option>
+                       <option value="GBP">Livres(GBP)</option>
+                       <option value="RUB">Rouble Russe(RUB)</option>
+                       <option value="CNY">Yuan(CNY)</option>
+                       <option value="CAD">Dollars Canadiens(CAD)</option>
+                       <option value="JPY">Japanese Yen (JPY)</option>
+                       <option value="USD">Dollars US (USD)</option>
+                       <option value="BTC">BiteCoin (BTC)</option>
+                       <option value="BTE">ByteCoin (BTE)</option>
+                     </select>
+                 </td>
+             </tr>
+         </table>
+        </div>
+      </div>
     </section>
     <section class="col-md-12">
       <h1>Contact Form</h1>
-      <section class="sec-formulaire">
-            <form class="formulaire" action="/ma-page-de-traitem" method="post">
+      <section class="sec-formulaire col-md-12">
+            <form class="formulaire" action="" method="post">
               <div>
                 <label for="nom">Votre nom :</label>
-                <input type="text"  class="input-form"id="nom" name="user_name" placeholder="Votre prénom" maxlength="30"value="Ici votre nom"/>
+                <input id="name" type="text"  class="input-form"id="nom" name="user_name" placeholder="Votre prénom" maxlength="30"value="Ici votre nom"/>
                 <script>
                   var text = document.getElementById('text');
                   text.addEventListener('focus', function(e) {
@@ -140,8 +191,8 @@
                 </script>
               </div>
               <div>
-                <label for="courriel">Votre email :</label>
-                <input class="input-form"type="email" id="courriel" name="user_email"placeholder="Ici votre email" value="Ici votre email" maxlength="30" />
+                <label  for="courriel">Votre email :</label>
+                <input id="email" class="input-form"type="email" id="courriel" name="user_email"placeholder="Ici votre email" value="Ici votre email" maxlength="30" />
                 <script>
                   var text = document.getElementById('text');
                   text.addEventListener('focus', function(e) {
@@ -155,7 +206,7 @@
               <div>
                   <label for="Qui souhaiter vous contacter">Qui souhaiter vous contacter :</label>
                   <!---  <input type="text" name="Qui souhaiter vous contacter" id="Qui souhaiter vous contacter" placeholder="Ex : service-mobile" size="30" maxlength="10"/> -->
-                  <select class="input-form" name="choix" required>
+                  <select id="selected" class="input-form" name="choix" required>
                     <option class="input-form" value="Mobile" >Service Web</option>
                     <option class="input-form" value="Webmail">Service actualité</option>
                     <option class="input-form" value="informatique" >Service Esport</option>
@@ -166,11 +217,11 @@
               <div>
                 <label for="Voulez vous recevoir notre newletter">Voulez vous recevoir notre newletter :</label>
                 <!--- <input type="text" name="Voulez vous recevoir notre newletter" id="Voulez vous recevoir notre newletter" placeholder="" size="30" maxlength="10"/>  -->
-                <input class="input-form" type="radio" id="jojo" checked>Oui je m'abonne
+                <input id="newletter" class="input-form" type="radio" id="jojo" checked>Oui je m'abonne
               </div>
               <div>
                 <label for="message">Message :</label>
-                <textarea class="input-form" id="message" name="user_message" placeholder="Limité a 70 caractéres" maxlength="70" value="Ici votre message"></textarea>
+                <textarea id="message" class="input-form" id="message" name="user_message" placeholder="Limité a 70 caractéres" maxlength="70" value="Ici votre message"></textarea>
                 <script>
                   var text = document.getElementById('text');
                   text.addEventListener('focus', function(e) {
@@ -182,8 +233,8 @@
                 </script>
               </div>
               <div class="button">
-                <button type="submit">Envoyer votre message</button>
-                <button type="reset">Effacer mon message</button>
+                <button id="submit" type="submit">Envoyer votre message</button>
+                <button id="clear" type="reset">Effacer mon message</button>
               </div>
             </form>
         </section>
