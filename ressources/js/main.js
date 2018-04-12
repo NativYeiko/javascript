@@ -200,58 +200,6 @@ function newElement() {
   }
 }
 
-//Slider
-
-var slideIndex = 1;
-showDivs(slideIndex);
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("myslydes");
-  if (n > x.length) {
-    slideIndex =1
-  }
-  if (n < 1) {
-    slideIndex = x.length
-  }
-  for ( i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-
-//Convertiseur Monnais
-
-var url = 'http://data.fixer.io/api/latest?access_key=eff16e17710c78fc46dd4c53f27e92af&base=EUR&symbols=GBP,JPY,EUR,USD,RUB,CNY,CAD,BTC,BTE';
-
-// define from currency, to currency, and amount
-
- function recupererValeur() {
-// execute the conversion using the "convert" endpoint:
-$.ajax({
-    url: url,
-    dataType: 'jsonp',
-
-    success: function(res,status,req) {
-
-      console.log(res.rates);
-      console.log(status);
-      var taux = res.rates
-        , from = document.getElementById('from').value
-        , to = document.getElementById('to').value
-        , amount = document.getElementById('fromAmount').value
-
-        var result = amount * taux[to] / taux[from]
-
-
-      document.getElementById("toAmount").value=result
-
-
-    }
-})};
-
 //Compteur de mots
 
 var print = function(msg){

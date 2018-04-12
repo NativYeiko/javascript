@@ -17,10 +17,12 @@
     </header>
     <section class="col-md-12">
       <h3 class="col-md-12 titleMap">Developer Map alpha</h3>
-      <div id="map" class="col-md-6"></div>
-      <div class="col-md-6">
+      <div id="map" class="col-md-12"></div>
+    </section>
+    <section class="col-md-12">
+      <div class="col-md-12">
         <div id="box">
-         <h2 class="col-md-12 titleMap">Taux de change</h2>
+         <h2 class="col-md-6 titleMap">Taux de change</h2>
          <table>
              <tr>
                  <td><input id="fromAmount" type="text" size="15" onkeyup="recupererValeur()"/></td>
@@ -60,7 +62,7 @@
     </section>
     <section class="col-md-12">
       <div class="col-md-6">
-        <h1>Todo List</h1>
+        <h1 class="titleMap">Todo List</h1>
         <div id="myDIV" class="header">
           <h1>JS project</h1>
           <input type="text" id="myInput" placeholder="Ajoute tes taches">
@@ -76,7 +78,54 @@
         </ul>
       </div>
       <div lass="col-md-6">
-        <div  id="contcalendar"></div>
+        <h1 class="titleMap">Calculatrice</h1>
+        <br>
+        <noscript>Désolé, la calculatrice a besoin de JavaScript pour fonctionner!</noscript>
+        <div class="col-md-6">
+          <!-- Calculatrice -->
+          <form class="col-md-6">
+            <table>
+              <tbody>
+                <tr>
+                  <td colspan="4"><input name="texte" size="20" type="text" readonly /></td>
+                </tr>
+                <tr>
+                  <td><input value="7" onclick="ajouteChiffre(this.form,'7')" type="button" class="mainbutton" /></td>
+                  <td><input value="8" onclick="ajouteChiffre(this.form,'8')" type="button" class="mainbutton" /></td>
+                  <td><input value="9" onclick="ajouteChiffre(this.form,'9')" type="button" class="mainbutton" /></td>
+                  <td><input value="+" onclick='store(this.form); setOp("somme")' type="button" /></td>
+                </tr>
+                <tr>
+                  <td><input value="4" onclick="ajouteChiffre(this.form,'4')" type="button" class="mainbutton" /></td>
+                  <td><input value="5" onclick="ajouteChiffre(this.form,'5')" type="button" class="mainbutton" /></td>
+                  <td><input value="6" onclick="ajouteChiffre(this.form,'6')" type="button" class="mainbutton" /></td>
+                  <td><input value="-" onclick='store(this.form); setOp("soustraction")' type="button" /></td>
+                </tr>
+                <tr>
+                  <td><input value="1" onclick="ajouteChiffre(this.form,'1')" type="button" class="mainbutton" /></td>
+                  <td><input value="2" onclick="ajouteChiffre(this.form,'2')" type="button" class="mainbutton" /></td>
+                  <td><input value="3" onclick="ajouteChiffre(this.form,'3')" type="button" class="mainbutton" /></td>
+                  <td><input value="*" onclick='store(this.form); setOp("multiplication")' type="button" /></td>
+                </tr>
+                <tr>
+                  <td><input value="0" onclick="ajouteChiffre(this.form,'0')" type="button" class="mainbutton" /></td>
+                  <td><input value="." onclick="ajoutePoint(this.form)" type="button" class="mainbutton" /></td>
+                  <td><input value="C" onclick='raz(this.form)' type="button" class="mainbutton" /></td>
+                  <td><input value="/" onclick='store(this.form); setOp("division")' type="button" /></td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                  <input name="affichage" size="15" type="text" readonly />
+                  </td>
+                  <td>
+                  <input value="=" onclick='storeEq(this.form); calc(this.form)' type="button" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+          </form>
+        </div>
       </div>
     </section>
     <footer id="footer">
@@ -91,6 +140,9 @@
     <!-- JS --->
     <scriptsrc="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></scrip>
     <script type="text/javascript" src="ressources\js\jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="ressources\js/calendar.js"></script>
+    <script type="text/javascript" src="ressources\js/changepay.js"></script>
+    <script type="text/javascript" src="ressources\js/slider.js"></script>
     <script type="text/javascript" src="ressources\js/map.js"></script>
     <script type="text/javascript" src="ressources\js/main.js"></script>
   </body>
