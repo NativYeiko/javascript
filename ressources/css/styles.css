@@ -1,16 +1,21 @@
 body{
-  background-color: #58b1e7;
+  /*background-color: #58b1e7;*/
+  background-image: url(../img/developpeur-web.png);
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 h1{
   text-align: center;
 }
-
+.titleMap{
+  color: red;
+}
 /***** Horloge ******/
 
 #clock{
   color: #fff;
-  font-size: 60px;
-  background-color: #000;
+  font-size: 20px;
+  background-color: ;
   padding: 0.5em 0em;
   width: 50%;
   margin: 0px auto;
@@ -144,10 +149,12 @@ ul li.checked::before {
 
 /* Style header */
 .header {
-    background-color: #0e7e3b;
-    padding: 30px 40px;
-    color: yellow;
-    text-align: left;
+  background: #003973;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 30px 40px;
+  color: yellow;
+  text-align: left;
 }
 
 /* Clear floats after the header */
@@ -223,6 +230,7 @@ img{
 h2
 {
      text-align: center;
+     color: red
  }
 table
 {
@@ -360,3 +368,118 @@ button {
 /****************************************\
 *******Fin Formulaire de Contact**********
 \****************************************/
+
+/****************************************\
+************** Calendrier ****************
+\****************************************/
+
+#contcalendar{
+
+width:400px;
+margin:auto;
+margin-top:100px;
+background-color:#904044;
+-webkit-box-shadow: 10px 10px 10px #212121;
+ filter:progid:DXImageTransform.Microsoft.Shadow(color=#333333,direction=120,strength=5);
+box-shadow: 10px 10px 10px #212121;
+border:1px ridge #aaa;
+border-radius:10px;
+}
+
+#contcalendar table{
+
+margin:auto;
+text-align:center;
+font-size:12px;
+font-weight:bold;
+line-height:20px;
+text-shadow: 10px 10px 10px #232711;
+ filter:progid:DXImageTransform.Microsoft.Shadow(color=#333333,direction=120,strength=7);
+
+}
+
+/*****************************************\
+******************* Map *******************
+\*****************************************/
+
+.titleMap{
+  text-align: center;
+  font-weight: 400;
+  border-radius: 5px
+}
+#map {
+ height: 500px;
+
+ margin-left: 25px;
+
+}
+#description {
+       font-family: Roboto;
+       font-size: 15px;
+       font-weight: 300;
+     }
+
+     #infowindow-content .title {
+       font-weight: bold;
+     }
+
+     #infowindow-content {
+       display: none;
+     }
+
+     #map #infowindow-content {
+       display: inline;
+     }
+
+     .pac-card {
+       margin: 10px 10px 0 0;
+       border-radius: 2px 0 0 2px;
+       box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       outline: none;
+       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+       background-color: #fff;
+       font-family: Roboto;
+     }
+
+     #pac-container {
+       padding-bottom: 12px;
+       margin-right: 12px;
+     }
+
+     .pac-controls {
+       display: inline-block;
+       padding: 5px 11px;
+     }
+
+     .pac-controls label {
+       font-family: Roboto;
+       font-size: 13px;
+       font-weight: 300;
+     }
+
+     #pac-input {
+       background-color: #fff;
+       font-family: Roboto;
+       font-size: 15px;
+       font-weight: 300;
+       margin-left: 12px;
+       padding: 0 11px 0 13px;
+       text-overflow: ellipsis;
+       width: 400px;
+     }
+
+     #pac-input:focus {
+       border-color: #4d90fe;
+     }
+
+     #title {
+       color: #fff;
+       background-color: #4d90fe;
+       font-size: 25px;
+       font-weight: 500;
+       padding: 6px 12px;
+     }
+     #target {
+       width: 345px;
+     }

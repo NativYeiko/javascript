@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Developer Map</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Digital projet">
+    <meta name="viewport" content="width=device-width">
+    <!-- CSS -->
+    <link rel="stylesheet" href="ressources/css/responsive.css">
+    <link rel="stylesheet" href="vendors/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ressources/css/styles.css">
+  </head>
+  <body class="page2">
+    <header class=" header col-md-12">
+      <div id="clock" class="">
+      </div>
+    </header>
+    <section class="col-md-12">
+      <h3 class="col-md-12 titleMap">Developer Map alpha</h3>
+      <div id="map" class="col-md-6"></div>
+      <div class="col-md-6">
+        <div id="box">
+         <h2 class="col-md-12 titleMap">Taux de change</h2>
+         <table>
+             <tr>
+                 <td><input id="fromAmount" type="text" size="15" onkeyup="recupererValeur()"/></td>
+                 <td>
+                     <select id="from" onchange="recupererValeur()">
+                       <option value="EUR">Europe (EUR)</option>
+                       <option value="GBP">Livres (GBP)</option>
+                       <option value="RUB">Rouble Russe (RUB)</option>
+                       <option value="CNY">Yuan (CNY)</option>
+                       <option value="CAD">Dollars Canadiens (CAD)</option>
+                       <option value="USD">Dollars US (USD)</option>
+                       <option value="JPY">Japanese Yen (JPY)</option>
+                       <option value="BTC">BiteCoin (BTC)</option>
+                       <option value="BTE">ByteCoin (BTE)</option>
+                     </select>
+                 </td>
+             </tr>
+             <tr>
+                <td><input id="toAmount" type="text" size="15" disabled/></td>
+                 <td>
+                     <select id="to" onchange="recupererValeur()">
+                       <option value="EUR">Europe (EUR)</option>
+                       <option value="GBP">Livres(GBP)</option>
+                       <option value="RUB">Rouble Russe(RUB)</option>
+                       <option value="CNY">Yuan(CNY)</option>
+                       <option value="CAD">Dollars Canadiens(CAD)</option>
+                       <option value="JPY">Japanese Yen (JPY)</option>
+                       <option value="USD">Dollars US (USD)</option>
+                       <option value="BTC">BiteCoin (BTC)</option>
+                       <option value="BTE">ByteCoin (BTE)</option>
+                     </select>
+                 </td>
+             </tr>
+         </table>
+        </div>
+      </div>
+    </section>
+    <section class="col-md-12">
+      <div class="col-md-6">
+        <h1>Todo List</h1>
+        <div id="myDIV" class="header">
+          <h1>JS project</h1>
+          <input type="text" id="myInput" placeholder="Ajoute tes taches">
+          <span onclick="newElement()" class="addBtn">Ajouter la tache</span>
+        </div>
+        <ul id="myUL">
+          <li>Révisé le JS</li>
+          <li class="checked">Faire ma Todo List</li>
+          <li>Refaire les Exos Js pour etre sur</li>
+          <li>Approfondir le DOM</li>
+          <li>Doc sur MySQL pour base de donné</li>
+          <li>Finir le Projet</li>
+        </ul>
+      </div>
+      <div lass="col-md-6">
+        <div  id="contcalendar"></div>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="container">
+        <div class="text-center">
+          <p> Copyright  &copy;2018<a target="_blank" href="https://github.com/NativYeiko">Developer </a>Theme. All Rights Reserved. <br> Designed by <a target="_blank" href="https://github.com/NativYeiko">Aymeric Ragazzi</a></p>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCskPL4PKOC10SJ85-8B0uuRZgtdpgKQWQ&libraries=places"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCskPL4PKOC10SJ85-8B0uuRZgtdpgKQWQ&callback=initMap"></script>
+    <!-- JS --->
+    <scriptsrc="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></scrip>
+    <script type="text/javascript" src="ressources\js\jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="ressources\js/map.js"></script>
+    <script type="text/javascript" src="ressources\js/main.js"></script>
+  </body>
+</html>

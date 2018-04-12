@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Digital projet">
     <meta name="viewport" content="width=device-width">
-    <title>Porjet-bourse</title>
+    <title>Porjet-JS</title>
     <!-- CSS -->
     <link rel="stylesheet" href="ressources/css/responsive.css">
     <link rel="stylesheet" href="vendors/css/bootstrap.min.css">
@@ -15,6 +15,9 @@
     </script>
   </head>
   <body>
+    <header class="header col-md-12">
+
+    </header>
     <section class="col-md-12">
       <h1>Horloge Digital</h1>
       <div class="col-md-12">
@@ -63,65 +66,31 @@
 					<table>
 						<tbody>
 							<tr>
-								<td colspan="4">
-								<input name="texte" size="20" type="text" readonly />
-								</td>
+								<td colspan="4"><input name="texte" size="20" type="text" readonly /></td>
 							</tr>
 							<tr>
-								<td>
-								<input value="7" onclick="ajouteChiffre(this.form,'7')" type="button" class="mainbutton" />
-								</td>
-								<td>
-								<input value="8" onclick="ajouteChiffre(this.form,'8')" type="button" class="mainbutton" />
-								</td>
-								<td>
-								<input value="9" onclick="ajouteChiffre(this.form,'9')" type="button" class="mainbutton" />
-								</td>
-								<td>
-								<input value="+" onclick='store(this.form); setOp("somme")' type="button" />
-								</td>
+								<td><input value="7" onclick="ajouteChiffre(this.form,'7')" type="button" class="mainbutton" /></td>
+								<td><input value="8" onclick="ajouteChiffre(this.form,'8')" type="button" class="mainbutton" /></td>
+								<td><input value="9" onclick="ajouteChiffre(this.form,'9')" type="button" class="mainbutton" /></td>
+								<td><input value="+" onclick='store(this.form); setOp("somme")' type="button" /></td>
 							</tr>
 							<tr>
-								<td>
-								<input value="4" onclick="ajouteChiffre(this.form,'4')" type="button" class="mainbutton" />
-								</td>
-								<td>
-								<input value="5" onclick="ajouteChiffre(this.form,'5')" type="button" class="mainbutton" />
-								</td>
-								<td>
-								<input value="6" onclick="ajouteChiffre(this.form,'6')" type="button" class="mainbutton" />
-								</td>
-								<td>
-								<input value="-" onclick='store(this.form); setOp("soustraction")' type="button" />
-								</td>
+								<td><input value="4" onclick="ajouteChiffre(this.form,'4')" type="button" class="mainbutton" /></td>
+								<td><input value="5" onclick="ajouteChiffre(this.form,'5')" type="button" class="mainbutton" /></td>
+								<td><input value="6" onclick="ajouteChiffre(this.form,'6')" type="button" class="mainbutton" /></td>
+								<td><input value="-" onclick='store(this.form); setOp("soustraction")' type="button" /></td>
 							</tr>
 							<tr>
-								<td>
-								<input value="1" onclick="ajouteChiffre(this.form,'1')" type="button" class="mainbutton" />
-								</td>
-								<td>
-								<input value="2" onclick="ajouteChiffre(this.form,'2')" type="button" class="mainbutton" />
-								</td>
-								<td>
-								<input value="3" onclick="ajouteChiffre(this.form,'3')" type="button" class="mainbutton" />
-								</td>
-								<td>
-								<input value="*" onclick='store(this.form); setOp("multiplication")' type="button" />
-								</td>
+								<td><input value="1" onclick="ajouteChiffre(this.form,'1')" type="button" class="mainbutton" /></td>
+								<td><input value="2" onclick="ajouteChiffre(this.form,'2')" type="button" class="mainbutton" /></td>
+								<td><input value="3" onclick="ajouteChiffre(this.form,'3')" type="button" class="mainbutton" /></td>
+								<td><input value="*" onclick='store(this.form); setOp("multiplication")' type="button" /></td>
 							</tr>
 							<tr>
-								<td>
-								<input value="0" onclick="ajouteChiffre(this.form,'0')" type="button" class="mainbutton" />
-								</td>
-								<td>
-								<input value="." onclick="ajoutePoint(this.form)" type="button" class="mainbutton" />
-								</td>
-								<td>
-								<input value="C" onclick='raz(this.form)' type="button" class="mainbutton" />
-								</td>
-								<td>
-								<input value="/" onclick='store(this.form); setOp("division")' type="button" />
-								</td>
+								<td><input value="0" onclick="ajouteChiffre(this.form,'0')" type="button" class="mainbutton" /></td>
+								<td><input value="." onclick="ajoutePoint(this.form)" type="button" class="mainbutton" /></td>
+								<td><input value="C" onclick='raz(this.form)' type="button" class="mainbutton" /></td>
+								<td><input value="/" onclick='store(this.form); setOp("division")' type="button" /></td>
 							</tr>
 							<tr>
 								<td colspan="3">
